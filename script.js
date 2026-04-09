@@ -9,7 +9,7 @@ const modal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 const modalCaption = document.getElementById('caption');
 const closeModal = document.querySelector('.close');
-const galleryItems = document.querySelectorAll('.photo img');
+const galleryItems = document.querySelectorAll('.photo img, .photo-inline img');
 const volumeSlider = document.getElementById('volumeSlider');
 
 let isPlaying = false;
