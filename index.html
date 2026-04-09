@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Especial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomeOverlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <h2 class="welcome-title">Mensagem do seu amado</h2>
+            <p class="welcome-text">clique em qualquer lugar para visualizar</p>
+        </div>
+    </div>
+
+    <div class="photo photo-1">
+        <img src="assets/images/picture_1.png" alt="Olha o aviãozinho!">
+    </div>
+    
+    <div class="photo photo-2">
+        <img src="assets/images/picture_2.png" alt="Esse churros tava quente e eu fingi que não tava">
+    </div>
+    
+    <div class="photo photo-3">
+        <img src="assets/images/picture_3.png" alt="Proibido roubar o meu lanche">
+    </div>
+    
+    <div class="photo photo-4">
+        <img src="assets/images/picture_4.png" alt="Fiquei com medo do balanço quebrar">
+    </div>
+
+    <div class="content-wrapper">
+        <h1 class="title fade-in">FELIZ PÁSCOA</h1>
+        
+        <p class="message fade-in-delay">
+            Sei que a Páscoa já passou, e este presente chegou com um certo atraso... Mas como eu sempre me atraso, então combina :D
+        </p>
+
+        <p class="message fade-in-delay">
+            Escolhi especialmente este Ouro Branco porque sei que é um dos seus favoritos.
+        </p>
+
+        <div class="photo-inline-group">
+            <div class="photo-inline">
+                <img src="assets/images/picture_1.png" alt="Olha o aviãozinho!">
+            </div>
+            <div class="photo-inline">
+                <img src="assets/images/picture_2.png" alt="Esse churros tava quente e eu fingi que não tava">
+            </div>
+        </div>
+
+        <p class="message fade-in-delay-2">
+            Não sou muito bom com textos, então também deixei a música de fantasia tocar ao fundo (lembra que você disse isso?). Quero que saiba que você vem se tornando a pessoa mais doce e especial da minha vida, mesmo você achando que é bruta (não é). Aproveite cada mordida :)
+        </p>
+
+        <div class="photo-inline-group">
+            <div class="photo-inline">
+                <img src="assets/images/picture_3.png" alt="Proibido roubar o meu lanche">
+            </div>
+            <div class="photo-inline">
+                <img src="assets/images/picture_4.png" alt="Fiquei com medo do balanço quebrar">
+            </div>
+        </div>
+
+        <p class="message fade-in-delay-3">
+            Feliz presente de Páscoa atrasado meu amor, mas com todo o amor do mundo!
+        </p>
+
+        <p class="footer fade-in-delay-4">Te amo!</p>
+        <p class="footer-small fade-in-delay-4">(e sim, eu desenvolvi essa página pra essa mensagem e com fundo branco pois você gosta dessa cor :D)</p>
+    </div>
+
+    <div class="chibi-character chibi-left">
+        <img src="assets/images/chibi-knight-santa.png" alt="Knight">
+    </div>
+    
+    <div class="chibi-character chibi-right">
+        <img src="assets/images/chibi-hornet-glow.png" alt="Hornet">
+    </div>
+
+    <div class="music-player">
+        <svg class="progress-border" viewBox="0 0 400 80">
+            <rect id="progressStroke" x="1.5" y="1.5" width="397" height="77" rx="13" ry="13" 
+                  fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="3" 
+                  pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+        </svg>
+        
+        <button id="musicControl" class="music-control" title="Pausar música">
+            <svg id="pauseIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+            <svg id="playIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+        </button>
+        
+        <div class="music-info">
+            <div class="music-title">Choral Chambers</div>
+            <div class="music-artist">Hollow Knight Silksong</div>
+        </div>
+        
+        <div class="controls-column">
+            <div class="time-display">
+                <span id="currentTime">0:00</span>
+                :
+                <span id="duration">2:42</span>
+            </div>
+            
+            <div class="volume-control">
+                <svg class="volume-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="10">
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" src="assets/audio/music.mp3" loop></audio>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
