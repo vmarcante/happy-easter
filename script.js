@@ -7,6 +7,7 @@ const currentTimeEl = document.getElementById('currentTime');
 const durationEl = document.getElementById('duration');
 const modal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
+const modalCaption = document.getElementById('caption');
 const closeModal = document.querySelector('.close');
 const galleryItems = document.querySelectorAll('.photo img');
 const volumeSlider = document.getElementById('volumeSlider');
@@ -73,6 +74,7 @@ galleryItems.forEach(item => {
         modal.style.display = 'block';
         modalImage.src = item.src;
         modalImage.alt = item.alt;
+        modalCaption.textContent = item.title || item.alt;
     });
 });
 
